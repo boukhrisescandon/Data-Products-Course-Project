@@ -23,19 +23,8 @@ knit        : slidify::knit2slides
 
 * A linear model was developed using the mtcars data set to predict miles per gallon based on number of cylinders, horsepower, and transmission type:
 
-
-```r
+```{r, echo=TRUE}
 lm(mpg ~ cyl + hp + am, data=mtcars)
-```
-
-```
-## 
-## Call:
-## lm(formula = mpg ~ cyl + hp + am, data = mtcars)
-## 
-## Coefficients:
-## (Intercept)          cyl           hp           am  
-##    30.88834     -1.12721     -0.03688      3.90428
 ```
 
 ##### The final equation therefore is:
@@ -47,7 +36,12 @@ mpg = 30.889 - 1.127*cyl - 0.03688*hp + 3.9043*am
 
 ## Screenshot of the Application
 
-<img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+```{r fig.width=10, fig.height=10, fig.align='center', echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("app.png")
+ grid.raster(img)
+```
 
 
 --- .class #id 

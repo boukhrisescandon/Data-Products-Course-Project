@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predicting Vehicle Fuel Economy</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Predicting Vehicle Fuel Economy">
+  <meta name="author" content="Boukhris-Escandon">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Predicting Vehicle Fuel Economy</h1>
+    <h2>Developing Data Products Course Project</h2>
+    <p>Boukhris-Escandon<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Application Pitch</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>The purpose of this presentation is to pitch an application that allows users to predict the fuel economy of their vehicle.</li>
+<li>The application was developed using Shiny in R and deployed on RStudio&#39;s Shiny server.</li>
+<li>This presentation was created using Slidify.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Model Development</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>A linear model was developed using the mtcars data set to predict miles per gallon based on number of cylinders, horsepower, and transmission type:</li>
+</ul>
+
+<pre><code class="r">lm(mpg ~ cyl + hp + am, data=mtcars)
+</code></pre>
+
+<pre><code>## 
+## Call:
+## lm(formula = mpg ~ cyl + hp + am, data = mtcars)
+## 
+## Coefficients:
+## (Intercept)          cyl           hp           am  
+##    30.88834     -1.12721     -0.03688      3.90428
+</code></pre>
+
+<h5>The final equation therefore is:</h5>
+
+<p>mpg = 30.889 - 1.127*cyl - 0.03688*hp + 3.9043*am</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Screenshot of the Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Github and Shiny Server</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>You can find the code written for this project at <a href="https://github.com/boukhrisescandon/Data-Products-Course-Project">https://github.com/boukhrisescandon/Data-Products-Course-Project</a>. </li>
+<li>The application for predicting vehicle fuel economy is hosted on <a href="https://boukhris.shinyapps.io/Data_Products-Course_Project/">https://boukhris.shinyapps.io/Data_Products-Course_Project/</a>.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Application Pitch'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Model Development'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Screenshot of the Application'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Github and Shiny Server'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
