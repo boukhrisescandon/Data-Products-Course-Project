@@ -14,7 +14,7 @@ knit        : slidify::knit2slides
 ## Application Pitch
 
 * The purpose of this presentation is to pitch an application that allows users to predict the fuel economy of their vehicle.
-* The application was developed using Shiny in R and deployed on RStudio's Shiny server.
+* The application was developed using Shiny in R and deployed on R Studio's Shiny server.
 * This presentation was created using Slidify.
 
 --- .class #id 
@@ -45,9 +45,12 @@ mpg = 30.889 - 1.127*cyl - 0.03688*hp + 3.9043*am
 
 --- .class #id 
 
-## Screenshot of the Application
+## How to use the Application
 
-<img src="assets/fig/unnamed-chunk-2-1.png" title="plot of chunk unnamed-chunk-2" alt="plot of chunk unnamed-chunk-2" style="display: block; margin: auto;" />
+* First the user selects the numeric value of the number of cylinders the vehicle has. The selection ranges from 0 to 12 with the pre-filled value of 4.
+* Then the user fills in the numeric value of the approximate horsepower of their vehicle. The selection ranges from 70 to 700 in increments of 10. The pre-filled value is 170.
+* The last selection the user makes is to use the radio buttons to select the type of transmission the vehicle has. The choices are automatic or manual.
+* The last step is to press the "Calculate MPG!" button to begin the calculation. The result shows up of the right hand side of the application.
 
 
 --- .class #id 
